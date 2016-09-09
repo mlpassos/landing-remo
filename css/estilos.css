@@ -241,45 +241,127 @@ th {
   clear: both;
 }
 
+/* utils */
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.center-block {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-bottom: 0;
+}
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+.list-inline {
+  padding-left: 0;
+  margin-left: -5px;
+  list-style: none;
+}
+.list-inline > li {
+  display: inline-block;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.list-inline > li:last-of-type {
+  padding-right:0;
+}
+
+/* app */
+
+body {
+  background-color:#0C1A31;
+}
+
+.social-block li a {
+  margin-left:-4px;
+}
+
+.social-blocks {
+  margin-top:2px;
+  margin-left:-4px;
+}
+
+.social-blocks.first {
+  margin-left:0;
+}
+.social-blocks.last {
+  margin-left:-5px;
+}
+
 /* landing-page */
 
 .container {
-  width:1226px;
+  width:982px;
   margin:10px auto;
   /*background: red;*/
 }
 
-.esquerda-inner, .esquerda-out {
+.esquerda-inner {
   float:left;
 }
 
 .timemania {
-  margin-top:-5px;
+  margin-top:-2px;
 }
 
-.direita-out {
-  position:relative;
+/* responsive */
+
+@media (max-width: 768px) {
+  .container {
+    width:100%;
+  }
 }
 
-.social-blocks {
-  display:block;
-  margin-bottom:2px;
+@media (max-width: 992px) {
+ .img-responsive {
+    margin:0 auto;
+    /*opacity:.3;*/
+  }
+  .esquerda-inner {
+    float:none;
+  }
+  .timemania {
+    margin:-2px auto 0 auto;
+  }
+  .direita-out > img {
+    display:block;
+  }
+  .social-blocks, .social-blocks.first, .social-blocks.last {
+    margin:2px auto;
+  }
 }
 
-.social-block {
-  position:absolute;
-  /*top:435px;*/
-  top:0;
-  right:0;
-}
 
-.entrar {
-  font-size:30px;
-  clear:both;
-  float:right;
-  margin-top:-35px;
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
 }
-
-.entrar a {
-  text-decoration: none;
+@media (min-width: 992px) {
+  .container {
+    width: 982px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 982px;
+  }
 }
